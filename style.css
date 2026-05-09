@@ -62,3 +62,9 @@ nav {
     margin: 0 12px;
     font-weight: bold;
 }
+
+/* ABOUT ME SECTION */
+
+#about-me {
+    min-height: 100vh;
+}
