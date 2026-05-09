@@ -133,4 +133,13 @@ nav {
 
 .about-me__link {
     font-size: 20px;
+    color: #242424;
+    text-decoration: none;
+}
+
+.about-me__link {
+    font-size: 20px;
+    color: rgb(243, 152, 255);
+    text-decoration: none;
+    padding: 0 16px;
 }
