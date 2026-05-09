@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, span {
     line-height: 1.25;
 }
 
+h1 {
+    font-size: 36px;
+}
+
 p {
     line-height: 1.5;
     font-size: 16px;
@@ -19,6 +23,28 @@ p {
 
 li {
     list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.name {
+    color: rgb(208, 146, 236)
+}
+
+.frontend {
+    color: rgb(149, 69, 255);
 }
 
 /* NAVIGATION BAR */
@@ -67,4 +93,44 @@ nav {
 
 #about-me {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__info--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-me__picture--mask {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 1);
+    margin-bottom: 28px;
+}
+
+.about-me__picture {
+    width: 100%;
+    transform: scale(1.5);
+    padding-top: 8px;
+}
+
+.about-me__info--title {
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+
+.about-me__info--p {
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+
+.about-me__link {
+    font-size: 20px;
 }
