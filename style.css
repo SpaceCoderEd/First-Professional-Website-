@@ -178,7 +178,7 @@ nav {
     max-width: 100px;
 }
 
-.lang__img:hover {
+.language:hover .lang__img {
     filter: brightness(80%);
     opacity: 0.86;
     transform: scale(0.9);
@@ -186,6 +186,9 @@ nav {
 
 .language {
     width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .lang__img--wrapper {
@@ -199,4 +202,28 @@ nav {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+}
+
+.lang__name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms ease;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.language:hover .lang__name {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.lang-text {
+    color:rgb(148, 105, 250);
+}
+
+/* PROJECTS SECTION */
+
+.project__img {
+    width: 100%;
 }
