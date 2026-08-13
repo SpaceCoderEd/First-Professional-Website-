@@ -31,6 +31,14 @@ p {
   font-size: 16px;
 }
 
+i {
+  transition: all 300ms ease;
+}
+
+i:hover {
+  opacity: 0.7;
+}
+
 a {
   text-decoration: none;
   position: relative;
@@ -169,6 +177,19 @@ nav {
   overflow: hidden;
   box-shadow: 0px 8px 16px rgb(146, 146, 146);
   margin-bottom: 28px;
+  animation: animate-profile-pic 800ms 200ms backwards;
+}
+
+@keyframes animate-profile-pic {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+    }
 }
 
 .about-me__picture {
@@ -180,17 +201,20 @@ nav {
 .about-me__info--title {
   font-size: 20px;
   margin-bottom: 28px;
+  animation: fade-up 650ms 400ms backwards;
 }
 
 .about-me__info--p {
   font-size: 20px;
   margin-bottom: 28px;
+  animation: fade-up 650ms 600ms backwards;
 }
 
-.about-me__link {
-  font-size: 20px;
-  color: #9b9b9b;
-  text-decoration: none;
+.about-me__links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+  animation: fade-up 650ms 800ms backwards;
 }
 
 .about-me__link {
@@ -200,14 +224,52 @@ nav {
   padding: 0 16px;
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .about-me__img--container {
   flex: 1;
   display: flex;
   align-items: center;
+  animation: fade-in 1200ms 800ms backwards;
 }
 
 .about-me__img {
   width: 100%;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+      opacity: 1;
+    }
+}
+
+.wave {
+  display: inline-block;
+  animation: animate-wave 500ms infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+  0% {
+    transform: rotate(0);
+  }
+  50% { 
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 /* TECH STACK SECTION */
@@ -407,4 +469,56 @@ footer {
     nav {
         height: 68px;
     }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .about-me__info--p {
+      font-size: 16px;
+    }
+
+    .language {
+      width: calc(100% / 2);
+    }
+
+    .project__description--p {
+      font-size: 14px;
+    }
+
+    .project__description {
+      left: 30px;
+      padding-right: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+  .nav__link:not(:last-child) {
+    display: none;
+  }
+
+  .project__description {
+    padding: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .project__description--p {
+    display: none;
+  }
+
+  .project__description--links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project__description--title {
+    line-height: 1;
+    text-align: center;
+  }
+
+  .project__description--subtitle {
+    text-align: center;
+    margin: 12px 0;
+  }
 }
